@@ -1,0 +1,5 @@
+scan,piastra,n_seme,timestamp,pixel_area,global_id,percent_growth,salt_group,treatment
+scan1,1,11,24,31292.0,scan1_24_p1_seed11,0.0,No salt,No MF
+scan1,2,11,40,5660.0,scan1_40_p2_seed11,0.0,No salt,No MF
+scan1,4,11,85,40536.0,scan1_85_p4_seed11,0.0,Medium salt,No MF
+scan1,4,11,132,41478.5,scan1_132_p4_seed11,2.3250937438326424,Medium salt,No MF

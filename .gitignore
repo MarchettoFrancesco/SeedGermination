@@ -1,0 +1,67 @@
+*.pth
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments ---
+.env/
+.venv/
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# --- Conda ---
+miniconda3/
+.conda/
+.condarc
+
+# --- System files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & temp files ---
+*.log
+*.tmp
+*.swp
+*.bak
+
+# --- Jupyter and history ---
+.ipython/
+.python_history
+.bash_history
+
+# --- Machine learning / experiment tracking ---
+wandb/
+runs/
+plots/
+histories/
+
+# --- Configuration and cache ---
+.cache/
+.local/
+.nv/
+.landscape/
+.config/
+.keras/
+__MACOSX/
+
+# --- Credentials and user configs ---
+.netrc
+.profile
+.bashrc
+.bash_logout
+.motd_shown
+
+# --- Installers / binaries ---
+Miniconda3-latest-Linux-x86_64.sh
+
+# --- Miscellaneous ---
+*.lock
