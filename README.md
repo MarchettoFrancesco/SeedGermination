@@ -15,7 +15,6 @@ Si vuole provare a automatizzare questo processo per sapere quando un seme è ge
 │   ├── main.py                # training + valutazione + report + salvataggio modello
 │   └── utils.py               # plot_history(), pick_threshold(), ecc.
 │
-├── histories/                 # training histories salvate (.pkl)
 ├── plots/                     # grafici metriche (.png)
 ├── reports/                   # report di valutazione (.md)
 └── segmentation.ipynb         # segmentazione singoli semi e creazione dataset
