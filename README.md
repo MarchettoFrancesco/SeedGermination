@@ -6,6 +6,8 @@ Si vuole provare a automatizzare questo processo per sapere quando un seme è ge
 
 ## 📁 Project structure
 
+semi/
+
 ```text
 .
 ├── project/
@@ -19,3 +21,4 @@ Si vuole provare a automatizzare questo processo per sapere quando un seme è ge
 ├── reports/                   # report di valutazione (.md)
 └── segmentation.ipynb         # segmentazione singoli semi e creazione dataset
 ```
+in segmented_seeds_ordered ci sono dei csv fatti calcolando aree dei semi e le foto singole dei semi (15k)
