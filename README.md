@@ -4,16 +4,19 @@ Repository per classificazione automatica della germinazione dei semi (classe 0 
 partendo da immagini acquisite con uno scanner che comprendeva 6 piastrine con 10 semi ciascuna, vengono segmentati i singoli semi ed associati ad un dataset la cui label di germinazione è stata fatta manualmente.
 Si vuole provare a automatizzare questo processo per sapere quando un seme è germinarto e indaghiamo un approccio con varie CNN.
 
-## Struttura del progetto
-.
-├── project:
-     config.py # Configurazione (path, iperparametri, architetture)
-     data_processing.py # CSV cleaning, labeling immagini, split by seed, Dataset PyTorch
-     model.py # build_model(): custom + modelli pre-trained (torchvision)
-     main.py # training + valutazione + report + salvataggio modello
-     utils.py # plot_history(), pick_threshold(), ecc.
+## 📁 Project structure
 
-├── histories/ # history training salvate (.pkl)
-├── plots/ # grafici metriche (.png)
-└── reports/ # report valutazione (.md)
-└── segmentation.ipynb # segmentazione singoli semi e creazione dataset 
+```text
+.
+├── project/
+│   ├── config.py              # Configurazione (path, iperparametri, architetture)
+│   ├── data_processing.py     # CSV cleaning, labeling immagini, split by seed, Dataset PyTorch
+│   ├── model.py               # build_model(): custom + modelli pre-trained (torchvision)
+│   ├── main.py                # training + valutazione + report + salvataggio modello
+│   └── utils.py               # plot_history(), pick_threshold(), ecc.
+│
+├── histories/                 # training histories salvate (.pkl)
+├── plots/                     # grafici metriche (.png)
+├── reports/                   # report di valutazione (.md)
+└── segmentation.ipynb         # segmentazione singoli semi e creazione dataset
+```
