@@ -8,7 +8,10 @@ from torchvision.models import (
     EfficientNet_B0_Weights,
     ConvNeXt_Tiny_Weights,
     MobileNet_V3_Small_Weights
+    
 )
+from torchvision import convnext_tiny
+
 def build_model(architecture='custom', input_shape=(3, 256, 256), pretrained=True):
     if architecture == 'custom':
         model = nn.Sequential(
@@ -27,7 +30,7 @@ def build_model(architecture='custom', input_shape=(3, 256, 256), pretrained=Tru
         )
     elif architecture == 'alexnet':
         # Load with map_location to ensure weights are on the correct device
-        weights = 'AlexNet_Weights.DEFAULT' if pretrained else None
+        weights = AlexNet_Weights.DEFAULT if pretrained else None
         model = models.alexnet(weights=weights)
         model.classifier = nn.Sequential(
             nn.Dropout(0.6),
@@ -38,7 +41,7 @@ def build_model(architecture='custom', input_shape=(3, 256, 256), pretrained=Tru
             nn.Sigmoid()
         )
     elif architecture == 'vgg16':
-        weights = 'VGG16_Weights.DEFAULT' if pretrained else None
+        weights = VGG16_Weights.DEFAULT if pretrained else None
         model = models.vgg16(weights=weights)
         model.classifier = nn.Sequential(
             nn.Linear(model.classifier[0].in_features, 256),
@@ -48,7 +51,7 @@ def build_model(architecture='custom', input_shape=(3, 256, 256), pretrained=Tru
             nn.Sigmoid()
         )
     elif architecture == 'resnet50':
-        weights = 'ResNet50_Weights.DEFAULT' if pretrained else None
+        weights = ResNet50_Weights.DEFAULT if pretrained else None
         model = models.resnet50(weights=weights)
         model.fc = nn.Sequential(
             nn.Linear(model.fc.in_features, 256),
@@ -70,7 +73,6 @@ def build_model(architecture='custom', input_shape=(3, 256, 256), pretrained=Tru
 
     #  ConvNeXt-Tiny
     elif architecture == 'convnext_tiny':
-        from torchvision.models import convnext_tiny, ConvNeXt_Tiny_Weights
         weights = ConvNeXt_Tiny_Weights.DEFAULT if pretrained else None
         model = convnext_tiny(weights=weights)
         # Sostituisci l'ultimo livello di classificazione
